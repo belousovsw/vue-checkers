@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+	<title>Checkers</title>
+	<link href="template/checkers.css" />
+	<script src="js/checkers.js"></script>
+</head>
+
+<body>
+
+	<div class="card" id="checkers">
+	<div class="card-header header-elements-inline">
+		<h5 class="card-title">Checkers</h5>
+		<div class="header-elements">
+			<div class="list-icons"></div>
+		</div>
+	</div>
+
+	<div class="card-body">
+		<div class="row">
+			<div class="col-lg-3">
+				<span>turn is {{whoTurn}}</span>
+			</div>
+			<div class="col-lg-9">
+				<table>
+					<tbody>
+					<tr v-for="(row, x) in board">
+						<td v-for="(field, y) in row"
+							class="boardCell"
+							:class="[field.color, {validMove: field.validTurn}]"
+							v-on:click="move(x, y)">
+
+							<div class="checker"
+								 v-if="field.checkerId !== null"
+								 :class="[ { selected: isSelectedChecker(x, y)}, field.checkerType ]"
+								 v-on:click="selectChecker(x, y)">
+							</div>
+
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer justify-content-between align-items-center d-flex">
+		<div>
+
+		</div>
+		<div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
