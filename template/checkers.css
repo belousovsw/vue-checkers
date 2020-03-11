@@ -1,0 +1,36 @@
+.boardCell {
+    width: 50px; height: 50px; text-align: center;
+}
+.boardCell.white {
+    background-color: white !important;
+}
+.boardCell.black {
+    background-color: #4a4a4a !important;
+}
+.boardCell.black.validMove {
+    background-color: #5ab55e !important;
+}
+.boardCell.white.validMove {
+    background-color: #5ab55e !important;
+}
+.checker {
+    margin: 10px; width: 30px; height: 30px; border-radius: 15px;
+}
+.checker.white {
+    background-color: lightskyblue !important;
+}
+.checker.white:hover {
+    border: 2px solid #0aa7ef;
+}
+.checker.white.selected {
+    border: 3px solid #0aa7ef !important;
+}
+.checker.black {
+    background-color: darkblue !important;
+}
+.checker.black:hover {
+    border: 2px solid #0aa7ef;
+}
+.checker.black.selected {
+    border: 4px solid #0aa7ef !important;
+}
